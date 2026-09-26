@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <meta name="description" content="Image Gallery — explore moments through images. CodeAlpha Frontend Development Internship Project." />
+    <link rel="preconnect" href="https://images.pexels.com" />
+    <link rel="stylesheet" href="style.css" />
+    <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <h1 class="site-title">Image Gallery</h1>
+        <p class="site-subtitle">Explore moments through images.</p>
+      </div>
+    </header>
+
+    <main>
+      <nav class="filters" aria-label="Image category filters">
+        <button class="filter-btn is-active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="nature" type="button">Nature</button>
+        <button class="filter-btn" data-filter="travel" type="button">Travel</button>
+        <button class="filter-btn" data-filter="food" type="button">Food</button>
+        <button class="filter-btn" data-filter="animals" type="button">Animals</button>
+      </nav>
+
+      <section class="gallery" id="gallery" aria-label="Image gallery"></section>
+
+      <nav class="page-nav" aria-label="Gallery navigation" hidden>
+        <button class="nav-btn" id="prevBtn" type="button">&#8592; Previous</button>
+        <span class="page-info" id="pageInfo"></span>
+        <button class="nav-btn" id="nextBtn" type="button">Next &#8594;</button>
+      </nav>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Image Gallery | CodeAlpha Internship Project</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" hidden>
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close lightbox">&times;</button>
+      <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous image">&#8592;</button>
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+        <figcaption class="lightbox-caption" id="lightboxCaption"></figcaption>
+      </figure>
+      <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Next image">&#8594;</button>
+      <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
